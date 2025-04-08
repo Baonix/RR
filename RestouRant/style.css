@@ -1,0 +1,493 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background: #000;
+    color: #fff;
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden; /* Убираем горизонтальную прокрутку */
+  }
+  
+  /* Светящиеся круги */
+  .glow-circle {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none; /* Чтобы элементы не мешали взаимодействию */
+  }
+  
+  /* Зеленые круги */
+  .glow-circle.green {
+    background: radial-gradient(circle, rgba(0, 255, 127, 0.3), transparent);
+  }
+  
+  /* Белые круги */
+  .glow-circle.white {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+  }
+  
+  /* Размеры и расположение кругов */
+  .circle1 {
+    width: 400px;
+    height: 400px;
+    top: 15%;
+    left: 5%;
+    filter: blur(30px);
+  }
+  
+  .circle2 {
+    width: 500px;
+    height: 500px;
+    bottom: 20%;
+    right: 10%;
+    filter: blur(40px);
+  }
+  
+  .circle3 {
+    width: 250px;
+    height: 250px;
+    top: 60%;
+    left: 30%;
+    filter: blur(20px);
+  }
+  
+  .circle4 {
+    width: 600px;
+    height: 600px;
+    bottom: 10%;
+    left: 5%;
+    filter: blur(50px);
+  }
+  
+  .circle5 {
+    width: 150px;
+    height: 150px;
+    top: 5%;
+    right: 15%;
+    filter: blur(10px);
+  }
+  
+  .circle6 {
+    width: 300px;
+    height: 300px;
+    bottom: 5%;
+    left: 50%;
+    filter: blur(25px);
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .nav a:hover {
+    color: #00ff7f;
+    text-shadow: 0 0 10px #00ff7f;
+  }
+  
+  /* Логотип */
+  .logo img {
+    width: 80px; /* Увеличили размер */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo img:hover {
+    transform: scale(1.1); /* Эффект увеличения при наведении */
+  }
+  
+  /* Кнопка "Войти / Регистрация" */
+  .auth-link {
+    display: flex;
+    align-items: center;
+  }
+  
+  .auth-button {
+    padding: 10px 20px;
+    background: #00ff7f;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .auth-button:hover {
+    transform: scale(1.1);
+    background: #fff;
+    color: #000;
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('assets/background.png') no-repeat center center/cover;
+    position: relative;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00ff7f;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    padding: 15px 30px;
+    background: #00ff7f;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    transform: scale(1.1);
+    background: #fff;
+  }
+  
+  /* Menu Section */
+  .menu {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .menu h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .menu-items {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+  
+  .menu-item {
+    text-align: center;
+  }
+  
+  .item-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    background: #00ff7f;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 127, 0.8);
+  }
+  
+  .circle {
+    border-radius: 50%;
+  }
+  
+  .square {
+    border-radius: 10px;
+  }
+  
+  .triangle {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: linear-gradient(45deg, #00ff7f, #00b34d); /* Градиент для треугольника */
+    box-shadow: 0 0 15px rgba(0, 255, 127, 0.8); /* Подсветка */
+  }
+  
+  /* Gallery Section */
+  .gallery {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .gallery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .gallery-item {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Центрирование содержимого */
+    margin-bottom: 40px;
+    gap: 30px; /* Уменьшенный отступ между изображением и текстом */
+    max-width: 900px; /* Ограничение ширины контейнера */
+    margin: 0 auto; /* Центрирование блока */
+  }
+  
+  .gallery-item img {
+    width: 40%; /* Увеличенный размер изображений */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 127, 0.5);
+  }
+  
+  .gallery-item .text {
+    width: 50%; /* Больше места для текста */
+  }
+  
+  .gallery-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .gallery-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Центрированный блок */
+  .gallery-item.centered {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .gallery-item.centered img {
+    width: 50%; /* Уменьшенный размер изображения */
+    margin-bottom: 20px;
+  }
+  
+  /* About Section */
+  .about {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Auth Section */
+  .auth-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('assets/background.png') no-repeat center center/cover;
+    position: relative;
+  }
+  
+  .auth-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .auth-container {
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 127, 0.5);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .auth-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #00ff7f;
+    text-shadow: 0 0 10px #00ff7f;
+  }
+  
+  .auth-form input,
+  .register-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  .auth-form input:focus,
+  .register-form input:focus {
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+  }
+  
+  .auth-button {
+    width: 100%;
+    padding: 10px;
+    background: #00ff7f;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .auth-button:hover {
+    transform: scale(1.1);
+    background: #fff;
+  }
+  
+  .auth-switch {
+    margin-top: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .auth-switch a {
+    color: #00ff7f;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .auth-switch a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #00ff7f;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Menu Page */
+  .menu-page {
+    padding: 100px 20px 50px;
+    text-align: center;
+  }
+  
+  .menu-page h1 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px #00ff7f;
+  }
+  
+  .menu-category {
+    margin-bottom: 60px;
+  }
+  
+  .menu-category h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #00ff7f;
+    text-shadow: 0 0 10px #00ff7f;
+  }
+  
+  .menu-items {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .menu-item {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 127, 0.5);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .menu-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .menu-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .menu-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .menu-item p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .menu-item .price {
+    font-size: 1.2rem;
+    color: #00ff7f;
+    font-weight: bold;
+  }
+/* Кнопка "Перейти к меню" */
+.menu-button {
+    display: inline-block; /* Делаем ссылку блочным элементом */
+    margin-top: 50px; /* Увеличенный отступ сверху */
+    padding: 15px 30px;
+    background: #00ff7f; /* Зелёный фон */
+    color: #fff; /* Белый текст */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Показываем курсор "рука" при наведении */
+    font-size: 1.2rem;
+    text-decoration: none; /* Убираем подчёркивание для ссылки */
+    text-align: center; /* Выравнивание текста по центру */
+    box-shadow: 0 0 15px rgba(0, 255, 127, 0.8); /* Лёгкая подсветка */
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .menu-button:hover {
+    transform: scale(1.1); /* Увеличиваем кнопку при наведении */
+    background: #fff; /* Белый фон при наведении */
+    color: #000; /* Чёрный текст при наведении */
+    box-shadow: 0 0 20px rgba(0, 255, 127, 1); /* Усиливаем подсветку */
+  }
+  

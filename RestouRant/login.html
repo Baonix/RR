@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Авторизация - ResroRant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Светящиеся круги -->
+  <div class="glow-circle green circle1"></div>
+  <div class="glow-circle green circle2"></div>
+  <div class="glow-circle white circle3"></div>
+  <div class="glow-circle white circle4"></div>
+
+  <header class="header">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Логотип ResroRant">
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="index.html#menu">Меню</a></li>
+        <li><a href="index.html#about">О нас</a></li>
+        <li><a href="index.html#gallery">Галерея</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="auth-section">
+    <div class="auth-container">
+      <h2>Вход или регистрация</h2>
+      <form class="auth-form" id="authForm">
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Пароль" required>
+        <button type="submit" class="auth-button">Войти</button>
+        <p class="auth-switch">Нет аккаунта? <a href="#" id="switchToRegister">Зарегистрироваться</a></p>
+      </form>
+
+      <form class="register-form hidden" id="registerForm">
+        <input type="text" id="username" placeholder="Имя пользователя" required>
+        <input type="email" id="newEmail" placeholder="Email" required>
+        <input type="password" id="newPassword" placeholder="Пароль" required>
+        <button type="submit" class="auth-button">Зарегистрироваться</button>
+        <p class="auth-switch">Уже есть аккаунт? <a href="#" id="switchToLogin">Войти</a></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2023 ResroRant. Все права защищены.</p>
+  </footer>
+
+  <script src="auth.js"></script>
+</body>
+</html>

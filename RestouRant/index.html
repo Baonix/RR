@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RestoRant - Главная</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Светящиеся круги -->
+  <div class="glow-circle green circle1"></div>
+  <div class="glow-circle green circle2"></div>
+  <div class="glow-circle white circle3"></div>
+  <div class="glow-circle white circle4"></div>
+
+  <header class="header">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Логотип RestoRant">
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="#home">Главная</a></li>
+        <li><a href="menu.html">Меню</a></li>
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#gallery">Галерея</a></li>
+      </ul>
+    </nav>
+    <div class="auth-link">
+      <a href="login.html" class="auth-button">Войти / Регистрация</a>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <h1>RestoRant</h1>
+    <p>Любимое место, чтобы поесть</p>
+  </section>
+
+  <section id="menu" class="menu">
+    <h2>Наше меню</h2>
+    <div class="menu-items">
+      <div class="menu-item">
+        <div class="item-icon circle"></div>
+        <h3>Закуски</h3>
+        <p>Свежие и вкусные закуски.</p>
+      </div>
+      <div class="menu-item">
+        <div class="item-icon square"></div>
+        <h3>Основные блюда</h3>
+        <p>Блюда, приготовленные с любовью.</p>
+      </div>
+      <div class="menu-item">
+        <div class="item-icon triangle"></div>
+        <h3>Десерты</h3>
+        <p>Сладкие финальные аккорды.</p>
+      </div>
+    </div>
+    <a href="menu.html" class="menu-button">Перейти к меню</a>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <h2>Фотографии ресторана</h2>
+
+    <!-- Первый блок: фото слева, текст справа -->
+    <div class="gallery-item left">
+      <img src="assets/restaurant1.png" alt="Интерьер ресторана">
+      <div class="text">
+        <h3>Уютный интерьер</h3>
+        <p>Наши залы созданы для комфортного отдыха. Современный дизайн сочетается с теплотой домашней обстановки.</p>
+      </div>
+    </div>
+
+    <!-- Второй блок: фото справа, текст слева -->
+    <div class="gallery-item right">
+      <div class="text">
+        <h3>Вкусные блюда</h3>
+        <p>Каждое блюдо готовится из свежих ингредиентов и подается с любовью. Попробуйте наши фирменные десерты!</p>
+      </div>
+      <img src="assets/dish1.png" alt="Блюдо из меню">
+    </div>
+
+    <!-- Третий блок: фото слева, текст справа -->
+    <div class="gallery-item left">
+      <img src="assets/restaurant2.png" alt="Терраса ресторана">
+      <div class="text">
+        <h3>Летняя терраса</h3>
+        <p>Откройте для себя нашу летнюю террасу с видом на город. Идеальное место для романтического ужина.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>О нас</h2>
+    <p>RestoRant — место, где кулинарное искусство встречается с минимализмом. Наша миссия — создавать незабываемые впечатления от еды.</p>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2023 RestoRant. Все права защищены.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
